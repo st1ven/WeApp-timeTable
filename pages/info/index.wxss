@@ -1,0 +1,30 @@
+.page__header  {
+    text-align: center;
+    padding: 30px 0 20px;
+}
+.weui-media-box__thumb {
+    height: 35px;
+    width: 35px;
+    padding-bottom: 10px;
+}
+.page__desc,.weui-article__p {
+    color: #888;
+    font-size: 14px;
+}
+.weui-footer_fixed-bottom {
+    margin-bottom: 0;
+}
+.weui-footer__text {
+    padding-top: 5px;
+}
+.black {
+    margin: 0;
+    color: #000;
+}
+.weui-center {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.mini-btn {
+    margin-right: 2px;
+}

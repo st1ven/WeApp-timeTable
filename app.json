@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/teacher",
+    "pages/info/index",
+    "pages/search/today",
+    "pages/search/all"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "文经课表",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "style/icon/kb.png",
+        "selectedIconPath": "style/icon/select_kb.png",
+        "text": "学生课表"
+      },
+      {
+        "pagePath": "pages/index/teacher",
+        "iconPath": "style/icon/kb.png",
+        "selectedIconPath": "style/icon/select_kb.png",
+        "text": "教师课表"
+      },
+      {
+        "pagePath": "pages/info/index",
+        "iconPath": "style/icon/info.png",
+        "selectedIconPath": "style/icon/select_info.png",
+        "text": "关于课表"
+      }
+    ]
+  },
+  "debug": true
+}

@@ -1,0 +1,23 @@
+    <view class="page">
+        <view class="page__hd">
+          <image class="weui-media-box__thumb" src="{{logo}}" />
+          <view class="weui-badge">{{td.week}}周</view>
+          <view class="page__title">班级课表查询</view>
+        </view>
+        <view class="page__bd page__bd_spacing">
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">班级</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="className" placeholder="例如：建1604-1" value="{{className}}" bindinput="classNameInput"/>
+                    </view>
+                </view>
+            </view>
+            <view class="button-sp-area">
+              <button bindtap="searchToday" class="weui-btn" type="default" plain="true">查询当日课表</button>
+              <button bindtap="searchAll" class="weui-btn" type="default" plain="true">查询全部课表</button>
+            </view>
+        </view>
+    </view>

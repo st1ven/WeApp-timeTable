@@ -1,0 +1,39 @@
+page,.page,.page__bd{
+    height: 100%;
+    background-color: #EEE;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-navbar {
+    position: static;
+    background-color: #FFF;
+}
+.weui-tab__panel {
+    padding-top: 0;
+}
+.weui-media-box__title {
+    color: #1aad19;
+    font-size:13px;
+}
+.weui-media-box {
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+    background-color: #FFF;
+}
+.weui-media-box__info {
+    color: #000;
+    line-height: 8px;
+}
+.weui-media-box__Bold {
+    font-size: 15px;
+    font-weight: bold;
+}
+text + .weui-media-box__Bold {
+    display: block;
+    padding-top: 20px;
+}
+.weui-media-box__Bold + text {
+    float: right;
+}
