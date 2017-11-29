@@ -1,0 +1,15 @@
+<view class="page">
+  <view class="page__hd">
+    <image class="weui-media-box__thumb" src="{{logo}}" />
+    <view class="page__desc">部分教室可能会被临时安排，请以实际情况为准</view>
+  </view>
+  <view class="weui-panel__bd">
+      <view wx:for="{{listData}}" wx:for-item="list" wx:key="index" class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">
+          教室：{{list.room}}
+          <text class="weui-media-box__info">({{list.type}})</text>
+        <view class="weui-media-box__right"><text>{{list.seat}}</text>个座位</view>
+        </view>
+      </view>
+  </view>
+</view>

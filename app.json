@@ -1,14 +1,18 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/index/student",
     "pages/index/teacher",
+    "pages/index/freeroom",
     "pages/info/index",
+    "pages/info/help",
     "pages/search/today",
-    "pages/search/all"
+    "pages/search/all",
+    "pages/search/freeroom"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#FFF",
     "navigationBarTitleText": "文经课表",
     "navigationBarTextStyle":"black"
   },
@@ -18,23 +22,17 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "style/icon/kb.png",
-        "selectedIconPath": "style/icon/select_kb.png",
-        "text": "学生课表"
-      },
-      {
-        "pagePath": "pages/index/teacher",
-        "iconPath": "style/icon/kb.png",
-        "selectedIconPath": "style/icon/select_kb.png",
-        "text": "教师课表"
+        "iconPath": "icons/index.png",
+        "selectedIconPath": "icons/select_index.png",
+        "text": "课表首页"
       },
       {
         "pagePath": "pages/info/index",
-        "iconPath": "style/icon/info.png",
-        "selectedIconPath": "style/icon/select_info.png",
+        "iconPath": "icons/info.png",
+        "selectedIconPath": "icons/select_info.png",
         "text": "关于课表"
       }
     ]
   },
-  "debug": true
+  "debug": false
 }

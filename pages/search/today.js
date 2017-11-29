@@ -1,8 +1,8 @@
 const app = getApp()
-var todayInfo = require('../../untils/todayInfo.js')
+var todayInfo = require('../../utils/todayInfo.js')
 Page({
   data: {
-    logo: "/style/icon/user.png",
+    logo: "/icons/user.png",
     listData: '',
     tabs: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
     activeIndex: 0
@@ -23,8 +23,11 @@ Page({
     });
   },
   onLoad: function (options) {
+    wx.showLoading({
+      title: '数据加载中',
+    })
     var that = this;
-    var td = this.todayInfo('2017/8/29');
+    var td = this.todayInfo(app.globalData.startTime);
     if (td.week > 18) {
       td.week = 18, td.day = 0
     } else {
@@ -41,6 +44,7 @@ Page({
         name: options.name
       },
       success: function (res) {
+        wx.hideLoading()
         if (res.data.status == 1) {
           wx.showModal({
             content: '暂未查询到当前课表信息',

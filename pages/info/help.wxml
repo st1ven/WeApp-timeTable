@@ -1,0 +1,58 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">1. 如何更方便的使用文经课表?</view>
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">1.1 使用手机返回键返回上一页</view>
+                    <view class="weui-article__p">
+                        在文经课表中，有时左上角的按钮是✖关闭按钮，这时需要使用手机返回键返回上一页，不然会直接关闭的哟
+                    </view>
+                </view>
+                    <view class="weui-article__h3">1.2 显示在聊天顶部</view>
+                    <view class="weui-article__p">
+                        <image class="weui-article__img" src="{{img1}}" mode="aspectFit" style="height: 100px" />
+                        <text>\n在文经课表中，点击右上角●●●(按钮)，点击显示在聊天顶部，即可将文经课表固定在聊天列表的顶部位置</text>
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">1.3 添加到桌面</view>
+                    <view class="weui-article__p">
+                        在文经课表中，点击右上角●●●(按钮)，点击添加到桌面，即可将文经课表添加到桌面，之后直接在桌面点击文经课表即可进入
+                    </view>
+                </view>
+            </view>
+            <view class="weui-article__h1">2. 如何转发分享给朋友?</view>
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                        在文经课表中，点击右上角●●●(按钮)，点击转发，即可转发分享给朋友，如果同学问你下节课在哪上课，你可以直接把当天的课表发给他 😎，朋友问你想去哪里去上自习，直接发给他空闲教室，让他去选择喜欢的教室 😘
+                    </view>
+                </view>
+            </view>
+            <view class="weui-article__h1">3. 如何找到文经课表?</view>
+            <view class="weui-article__section">
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">3.1 通过微信打开</view>
+                    <view class="weui-article__p">
+                        <image class="weui-article__img" src="{{img2}}" mode="aspectFit" style="height: 73px" />
+                        <text>\n进入微信界面，点击发现，点击小程序，找到文经课表即可打开</text>
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">3.2  通过搜索打开</view>
+                    <view class="weui-article__p">
+                        进入微信界面，点击右上角搜索图标，输入文经课表即可打开
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">3.3 通过公众号打开</view>
+                    <view class="weui-article__p">
+                        关注“烟台大学文经学院学生会”公众号，点击菜单-查询-课表查询，即可打开
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

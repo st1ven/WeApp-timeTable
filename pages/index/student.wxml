@@ -2,26 +2,16 @@
         <view class="page__hd">
           <image class="weui-media-box__thumb" src="{{logo}}" />
           <view class="weui-badge">{{td.week}}周</view>
-          <view class="page__title">教师课表查询</view>
+          <view class="page__title">班级课表查询</view>
         </view>
         <view class="page__bd page__bd_spacing">
             <view class="weui-cells weui-cells_after-title">
-                <view class="weui-cell weui-cell_select">
-                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
-                        <view class="weui-label">系别</view>
-                    </view>
-                    <view class="weui-cell__bd">
-                        <picker name="teacherDept" value="{{deptIndex}}" bindchange="teacherDeptPicker" range="{{dept}}">
-                            <view class="weui-select weui-select_in-select-after">{{dept[deptIndex]}}</view>
-                        </picker>
-                    </view>
-                </view>
                 <view class="weui-cell weui-cell_input">
                     <view class="weui-cell__hd">
-                        <view class="weui-label">姓名</view>
+                        <view class="weui-label">班级</view>
                     </view>
                     <view class="weui-cell__bd">
-                        <input class="weui-input" name="teacherName" placeholder="例如：张三" value="{{teacherName}}" bindinput="teacherNameInput"/>
+                        <input class="weui-input" name="className" placeholder="例如：建1604-1" value="{{className}}" bindinput="classNameInput"/>
                     </view>
                 </view>
             </view>

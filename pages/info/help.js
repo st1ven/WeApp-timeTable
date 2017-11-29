@@ -2,18 +2,20 @@ const app = getApp()
 
 Page({
   data: {
-    logo: "/icons/kb.png"
+    img1: "../../images/1.png",
+    img2: "../../images/2.png",
   },
   onShareAppMessage: function () {
     return {
-      title: '文经课表',
+      title: '使用帮助',
       desc: '「文经课表」提供烟台大学文经学院在校生班级与教师课表及空闲教室查询服务',
-      path: '/pages/index/index'
+      path: '/pages/info/help'
     }
   },
   onLoad: function () {
     wx.setNavigationBarTitle({
-      title: '关于课表'
+      title: '使用帮助'
     });
+    wx.setStorageSync("help", 1)
   }
 })

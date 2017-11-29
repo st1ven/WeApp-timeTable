@@ -2,35 +2,37 @@ const app = getApp()
 
 Page({
   data: {
-    logo: "/icons/user.png",
-    listData: ''
+    logo: "/icons/search.png",
+    listData: []
   },
   onShareAppMessage: function () {
     return {
-      title: this.options.name + ' 全部课表',
-      path: '/pages/search/all?action=' + this.options.action + '&dept=' + this.options.dept + '&name=' + this.options.name
+      title: '空闲教室查询结果',
+      path: '/pages/search/freeroom?action=freeroom&build=' + this.options.build + '&section=' + this.options.section + '&day=' + this.options.day + '&week=' + this.options.week
     }
   },
   onLoad: function (options) {
-    wx.showLoading({
-      title: '数据加载中',
-    })
     var that = this
     wx.setNavigationBarTitle({
-      title: options.name + ' 全部课表'
+      title: '空闲教室查询结果'
+    })
+    wx.showLoading({
+      title: '数据加载中',
     })
     wx.request({
       url: 'https://wechat.sangsir.com/timetable/api.php',
       data: {
         action: options.action,
-        dept: options.dept,
-        name: options.name
+        build: options.build,
+        section: options.section,
+        day: options.day,
+        week: options.week
       },
       success: function (res) {
         wx.hideLoading()
         if (res.data.status == 1) {
           wx.showModal({
-            content: '暂未查询到当前课表信息',
+            content: '暂未查询到当前空闲教室信息',
             showCancel: false,
             success: function (res) {
               wx.navigateBack()
@@ -38,7 +40,7 @@ Page({
           })
         } else {
           that.setData({
-            listData: res.data.data
+            listData: res.data
           })
         }
       }

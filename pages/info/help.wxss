@@ -1,0 +1,13 @@
+page{
+    background-color: #FFFFFF;
+}
+image{
+    margin: 4px 0;
+}
+.weui-article__h1 {
+    color: red;
+    font-weight: bold;
+}
+.weui-article__h3 {
+    font-weight: bold;
+}

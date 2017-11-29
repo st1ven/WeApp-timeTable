@@ -23,5 +23,3 @@ function todayInfo(start) {
   return weekInfo;
 }
 module.exports.todayInfo = todayInfo
-//todayInfo("2017/2/27");
-//todayInfo("2017/8/29");
