@@ -10,6 +10,9 @@
           </view>
           <view class="weui-flex">
             <button bindtap="jumpPage" data-url="index/freeroom" class="weui-btn" type="default" plain="true"><image src="{{js}}" /><text>\n空教室查询</text></button>
+            <button bindtap="jumpPage" data-url="index/exam" class="weui-btn" type="default" plain="true"><image src="{{exam}}" /><text>\n考试安排</text></button>
+          </view>
+          <view class="weui-flex">
             <button bindtap="jumpPage" data-url="info/help" class="weui-btn" type="default" plain="true"><image src="{{help}}" /><text>\n使用帮助</text></button>
           </view>
         </view>

@@ -5,6 +5,7 @@ Page({
     kb: "/icons/kb.png",
     teacher: "/icons/teacher.png",
     js: "/icons/js.png",
+    exam: "/icons/exam.png",
     help: "/icons/help.png"
   },
   todayInfo: function (start) {

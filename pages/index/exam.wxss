@@ -17,16 +17,6 @@
     margin-top:-1em;
     position: absolute;
 }
-.weui-cell__ft {
-    color: #000;
-}
-.weui-cell:before {
-    border-top: 0;
-}
-.weui-flex {
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 .page__desc {
     color: #888;
     font-size: .8rem;

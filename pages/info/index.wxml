@@ -1,18 +1,22 @@
   <view class="page">
       <view class="page__hd page__header">
         <image class="weui-media-box__thumb" src="{{logo}}" />
-        <view class="page__title">「文经课表」1.1.1</view>
+        <view class="page__title">「文经课表」1.2.0</view>
       </view>
       <view class="page__bd">
         <view class="weui-article">
           <view class="weui-article__p">「文经课表」提供烟台大学文经学院在校生班级与教师课表及空闲教室查询服务，并诚挚的欢迎公众号关联小程序：文经课表（AppID：wx1de3425728815df0）。</view>
           <view class="weui-article__p black">数据来源：</view>
-          <view class="weui-article__p">· 学生、教师课表及空教室数据来自学校官方教务网站</view>
+          <view class="weui-article__p">· 班级、教师课表及空教室数据来自学校官方教务网站</view>
+          <view class="weui-article__p">· 考试安排数据来自教务发布的《17-18-1期末考试日程表张贴版》</view>
           <view class="weui-article__p black">技术支持：</view>
-          <view class="weui-article__p">· SangSir.Com</view>
-          <view class="weui-article__p">目前课表的功能正在逐渐增加中，如果你在使用中有任何问题，请点击【调戏客服】按钮或发送邮件至：i@sangsir.com。</view>
+          <view class="weui-article__p">· 建1604-1 桑子金</view>
+          <view class="weui-article__p black">联系方式：</view>
+          <view class="weui-article__p">· QQ：17878127 / WX：qq690204663</view>
+          <view class="weui-article__p"></view>
+          <view class="weui-article__p">目前课表的功能正在逐渐增加中，如果你在使用中有任何问题，请点击【联系客服】按钮或加我QQ&微信。</view>
           <view class="weui-center">
-            <button class="weui-btn mini-btn" size="mini" open-type="contact">调戏客服</button>
+            <button class="weui-btn mini-btn" size="mini" open-type="contact">联系客服</button>
             <button class="weui-btn mini-btn" size="mini" open-type="share">分享朋友</button>
           </view>
         </view>

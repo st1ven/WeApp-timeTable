@@ -3,6 +3,7 @@
           <image class="weui-media-box__thumb" src="{{logo}}" />
           <view class="weui-badge">{{td.week}}周</view>
           <view class="page__title">空教室查询</view>
+          <view class="page__desc">部分教室可能会被临时安排，请以实际情况为准</view>
         </view>
         <view class="page__bd page__bd_spacing">
             <view class="weui-cells weui-cells_after-title">

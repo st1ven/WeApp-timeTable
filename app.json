@@ -4,11 +4,13 @@
     "pages/index/student",
     "pages/index/teacher",
     "pages/index/freeroom",
+    "pages/index/exam",
     "pages/info/index",
     "pages/info/help",
     "pages/search/today",
     "pages/search/all",
-    "pages/search/freeroom"
+    "pages/search/freeroom",
+    "pages/search/exam"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -34,5 +36,5 @@
       }
     ]
   },
-  "debug": false
+  "debug": true
 }
