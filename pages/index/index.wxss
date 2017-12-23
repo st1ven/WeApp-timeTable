@@ -5,23 +5,20 @@
     padding: .5rem 0 3rem;
 }
 .page__title {
-    font-size: 3.2rem;
     font-weight: bold;
+}
+.bigTitle {
+    font-size: 3.2rem;
 }
 .page__desc {
     color: #FFF;
     font-size: .9rem;
 }
-image {
-    width: 3rem;
-    height: 3rem;
+.weui-center {
+    text-align: center;
 }
-.weui-btn {
-    width: 100%;
-    height: 100%;
-    margin: 15px;
-    padding: 15px;
-}
-.weui-btn:first-child {
-    margin: 15px;
+.info {
+    color: #888;
+    font-size: .8rem;
+    padding-top: 1rem;
 }

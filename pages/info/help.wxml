@@ -4,12 +4,12 @@
             <view class="weui-article__h1">1. 如何更方便的使用文经课表?</view>
             <view class="weui-article__section">
                 <view class="weui-article__section">
-                <view class="weui-article__section">
                     <view class="weui-article__h3">1.1 使用手机返回键返回上一页</view>
                     <view class="weui-article__p">
                         在文经课表中，有时左上角的按钮是✖关闭按钮，这时需要使用手机返回键返回上一页，不然会直接关闭的哟
                     </view>
                 </view>
+                <view class="weui-article__section">
                     <view class="weui-article__h3">1.2 显示在聊天顶部</view>
                     <view class="weui-article__p">
                         <image class="weui-article__img" src="{{img1}}" mode="aspectFit" style="height: 100px" />
@@ -56,6 +56,7 @@
                       </text>
                     </view>
                 </view>
+              <view class="weui-article__h1">Tips：使用手机返回键返回到首页</view>
             </view>
         </view>
     </view>

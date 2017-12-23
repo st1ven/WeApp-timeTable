@@ -2,7 +2,7 @@ const app = getApp()
 var todayInfo = require('../../utils/todayInfo.js')
 Page({
   data: {
-    logo: "/icons/user.png",
+    logo: "/images/icons/user.png",
     listData: '',
     tabs: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
     activeIndex: 0

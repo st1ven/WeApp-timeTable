@@ -2,8 +2,8 @@ const app = getApp()
 
 Page({
   data: {
-    img1: "../../images/1.png",
-    img2: "../../images/2.png",
+    img1: "../../images/contents/1.png",
+    img2: "../../images/contents/2.png",
   },
   onShareAppMessage: function () {
     return {

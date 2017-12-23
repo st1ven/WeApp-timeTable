@@ -2,7 +2,7 @@ const app = getApp()
 
 Page({
   data: {
-    logo: "/icons/kb.png"
+    logo: "/images/icons/kb.png"
   },
   onShareAppMessage: function () {
     return {

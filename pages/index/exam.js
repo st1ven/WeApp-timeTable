@@ -1,7 +1,7 @@
 const app = getApp()
 Page({
   data: {
-    logo: "/icons/exam.png"
+    logo: "/images/icons/exam.png"
   },
   todayInfo: function (start) {
     return todayInfo.todayInfo(start)

@@ -2,7 +2,7 @@ const app = getApp()
 var todayInfo = require('../../utils/todayInfo.js')
 Page({
   data: {
-    logo: "/icons/js.png",
+    logo: "/images/icons/js.png",
     build: ["文一教", "文二教"],
     buildIndex: 0,
     section: ["第一大节", "第二大节", "第三大节", "第四大节", "第五大节", "第六大节"],

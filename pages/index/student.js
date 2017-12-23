@@ -2,7 +2,7 @@ const app = getApp()
 var todayInfo = require('../../utils/todayInfo.js')
 Page({
   data: {
-    logo: "/icons/kb.png"
+    logo: "/images/icons/kb.png"
   },
   todayInfo: function (start) {
     return todayInfo.todayInfo(start)

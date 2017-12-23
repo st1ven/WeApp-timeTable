@@ -1,7 +1,7 @@
   <view class="page">
       <view class="page__hd page__header">
         <image class="weui-media-box__thumb" src="{{logo}}" />
-        <view class="page__title">「文经课表」1.2.0</view>
+        <view class="page__title">「文经课表」1.2.1</view>
       </view>
       <view class="page__bd">
         <view class="weui-article">
@@ -11,10 +11,7 @@
           <view class="weui-article__p">· 考试安排数据来自教务发布的《17-18-1期末考试日程表张贴版》</view>
           <view class="weui-article__p black">技术支持：</view>
           <view class="weui-article__p">· 建1604-1 桑子金</view>
-          <view class="weui-article__p black">联系方式：</view>
-          <view class="weui-article__p">· QQ：17878127 / WX：qq690204663</view>
-          <view class="weui-article__p"></view>
-          <view class="weui-article__p">目前课表的功能正在逐渐增加中，如果你在使用中有任何问题，请点击【联系客服】按钮或加我QQ&微信。</view>
+          <view class="weui-article__p">目前课表的功能正在逐渐增加中，如果你在使用中有问题或建议，请点击下方联系客服。</view>
           <view class="weui-center">
             <button class="weui-btn mini-btn" size="mini" open-type="contact">联系客服</button>
             <button class="weui-btn mini-btn" size="mini" open-type="share">分享朋友</button>

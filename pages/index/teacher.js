@@ -2,7 +2,7 @@ const app = getApp()
 var todayInfo = require('../../utils/todayInfo.js')
 Page({
   data: {
-    logo: "/icons/kb.png",
+    logo: "/images/icons/teacher.png",
     dept: ["管理系", "会计系", "机电工程系", "建筑工程系", "会计系", "经济系", "食品与生物工程系", "体教部", "外国语言文学系", "信息工程系", "中文与法律系"],
     deptIndex: 0,
     teacherName: ''

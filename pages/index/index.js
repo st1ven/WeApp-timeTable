@@ -2,19 +2,15 @@ const app = getApp()
 var todayInfo = require('../../utils/todayInfo.js')
 Page({
   data: {
-    kb: "/icons/kb.png",
-    teacher: "/icons/teacher.png",
-    js: "/icons/js.png",
-    exam: "/icons/exam.png",
-    help: "/icons/help.png"
+    kb: "/images/icons/kb.png",
+    teacher: "/images/icons/teacher.png",
+    js: "/images/icons/js.png",
+    exam: "/images/icons/exam.png",
+    help: "/images/icons/help.png",
+    about: "/images/icons/about.png"
   },
   todayInfo: function (start) {
-    return todayInfo.todayInfo(start)
-  },
-  jumpPage: function (event) {
-    wx.navigateTo({
-      url: '/pages/' + event.currentTarget.dataset.url
-    })
+    return todayInfo.todayInfo(start);
   },
   onShareAppMessage: function () {
     return {
@@ -33,9 +29,9 @@ Page({
         that.today = new Date().toLocaleDateString();
         that.day = "星期" + "日一二三四五六".charAt(new Date().getDay());
         if (that.td.week > 18) {
-          that.setData({ td: { "week": "结课" }, today: that.today, day: that.day });
+          that.setData({ td: { "week": "结课" }, today: that.today, day: that.day, info: res.data.info });
         } else {
-          that.setData({ td: that.td, today: that.today, day: that.day });
+          that.setData({ td: that.td, today: that.today, day: that.day, info: res.data.info });
         }
       }
     })
@@ -45,18 +41,12 @@ Page({
     if (help !== 1) {
       wx.showModal({
         title: '提示',
-        content: '我好像发现你是第一次使用文经课表呢~来跟我看看使用帮助吧！',
+        content: '我好像发现你是第一次使用文经课表呢，来跟我看看使用帮助吧！',
         showCancel: false,
         success: function (res) {
-          if (res.confirm) {
-            wx.navigateTo({
-              url: '../info/help'
-            });
-          } else {
-            wx.navigateTo({
-              url: '../info/help'
-            });
-          }
+          wx.navigateTo({
+            url: '../info/help'
+          });
         }
       })
     }

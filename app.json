@@ -18,23 +18,5 @@
     "navigationBarTitleText": "文经课表",
     "navigationBarTextStyle":"black"
   },
-  "tabBar": {
-    "color": "#888",
-    "selectedColor": "#000",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "iconPath": "icons/index.png",
-        "selectedIconPath": "icons/select_index.png",
-        "text": "课表首页"
-      },
-      {
-        "pagePath": "pages/info/index",
-        "iconPath": "icons/info.png",
-        "selectedIconPath": "icons/select_info.png",
-        "text": "关于课表"
-      }
-    ]
-  },
   "debug": true
 }

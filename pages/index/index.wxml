@@ -1,19 +1,41 @@
     <view class="page">
         <view class="page__hd">
-          <view class="page__title">{{td.week}}</view>
+          <view class="page__title">第 <text class="bigTitle">{{td.week}}</text> 周</view>
           <view class="page__desc">{{today}}　{{day}}</view>
         </view>
         <view class="page__bd">
-          <view class="weui-flex">
-            <button bindtap="jumpPage" data-url="index/student" class="weui-btn" type="default" plain="true"><image src="{{kb}}" /><text>\n班级课表</text></button>
-            <button bindtap="jumpPage" data-url="index/teacher" class="weui-btn" type="default" plain="true"><image src="{{teacher}}" /><text>\n教师课表</text></button>
+          <view class="weui-grids">
+            <navigator url="/pages/index/student" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="{{kb}}" />
+                <view class="weui-grid__label">班级课表</view>
+            </navigator>
+            <navigator url="/pages/index/teacher" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="{{teacher}}" />
+                <view class="weui-grid__label">教师课表</view>
+            </navigator>
+            <navigator url="/pages/index/freeroom" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="{{js}}" />
+                <view class="weui-grid__label">空闲教室</view>
+            </navigator>
+            <navigator url="/pages/index/exam" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="{{exam}}" />
+                <view class="weui-grid__label">考试安排</view>
+            </navigator>
+            <navigator url="/pages/info/help" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="{{help}}" />
+                <view class="weui-grid__label">使用帮助</view>
+            </navigator>
+            <navigator url="/pages/info/index" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="{{about}}" />
+                <view class="weui-grid__label">关于课表</view>
+            </navigator>
           </view>
-          <view class="weui-flex">
-            <button bindtap="jumpPage" data-url="index/freeroom" class="weui-btn" type="default" plain="true"><image src="{{js}}" /><text>\n空教室查询</text></button>
-            <button bindtap="jumpPage" data-url="index/exam" class="weui-btn" type="default" plain="true"><image src="{{exam}}" /><text>\n考试安排</text></button>
-          </view>
-          <view class="weui-flex">
-            <button bindtap="jumpPage" data-url="info/help" class="weui-btn" type="default" plain="true"><image src="{{help}}" /><text>\n使用帮助</text></button>
+          <view class="weui-article weui-center info">
+              <view class="weui-article__section">
+                  <view class="weui-article__p">
+                      <text>{{info}}</text>
+                  </view>
+              </view>
           </view>
         </view>
     </view>
