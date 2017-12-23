@@ -13,5 +13,6 @@
           <view class="weui-media-box__right"><text>{{list.num}}</text>人考试</view>
         </view>
       </view>
+      <button open-type="share" class="weui-btn" type="default">分享查询结果</button>
   </view>
 </view>

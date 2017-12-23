@@ -11,3 +11,8 @@ image{
 .weui-article__h3 {
     font-weight: bold;
 }
+.button-sp-area {
+    margin: 0 auto;
+    width: 95%;
+    padding-top: 25px;
+}

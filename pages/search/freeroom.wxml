@@ -11,5 +11,6 @@
         <view class="weui-media-box__right"><text>{{list.seat}}</text>个座位</view>
         </view>
       </view>
+      <button open-type="share" class="weui-btn" type="default">分享查询结果</button>
   </view>
 </view>

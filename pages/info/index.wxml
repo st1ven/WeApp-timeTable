@@ -1,7 +1,7 @@
   <view class="page">
       <view class="page__hd page__header">
         <image class="weui-media-box__thumb" src="{{logo}}" />
-        <view class="page__title">「文经课表」1.2.1</view>
+        <view class="page__title">「文经课表」1.2.2</view>
       </view>
       <view class="page__bd">
         <view class="weui-article">

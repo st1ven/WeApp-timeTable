@@ -18,5 +18,5 @@
     "navigationBarTitleText": "文经课表",
     "navigationBarTextStyle":"black"
   },
-  "debug": true
+  "debug": false
 }

@@ -38,4 +38,7 @@
               </view>
           </view>
         </view>
+        <view class="weui-footer weui-article weui-footer_fixed-bottom">
+            <button open-type="share" class="weui-btn" type="default" plain="true">分享文经课表</button>
+        </view>
     </view>
