@@ -3,9 +3,6 @@ Page({
   data: {
     logo: "/images/icons/exam.png"
   },
-  todayInfo: function (start) {
-    return todayInfo.todayInfo(start)
-  },
   classNameInput: function (e) {
     this.setData({
       className: e.detail.value

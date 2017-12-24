@@ -20,21 +20,22 @@ Page({
     }
   },
   onLoad: function () {
-    var that = this
+    this.today = new Date().toLocaleDateString();
+    this.day = "星期" + "日一二三四五六".charAt(new Date().getDay());
+    var that = this;
     wx.request({
       url: 'https://wechat.sangsir.com/timetable/api.php?action=start',
       success: function (res) {
         app.globalData.startTime = res.data.startTime
         that.td = that.todayInfo(app.globalData.startTime)
-        that.today = new Date().toLocaleDateString();
-        that.day = "星期" + "日一二三四五六".charAt(new Date().getDay());
-        if (that.td.week > 18) {
-          that.setData({ td: { "week": "结课" }, today: that.today, day: that.day, info: res.data.info });
-        } else {
-          that.setData({ td: that.td, today: that.today, day: that.day, info: res.data.info });
-        }
+        that.info = res.data.info
+        that.setData({ td: that.td, today: that.today, day: that.day, info: that.info });
+      },
+      fail: function () {
+        that.td = that.todayInfo(app.globalData.startTime)
+        that.setData({ td: that.td, today: that.today, day: that.day });
       }
-    })
+    });
   },
   onReady: function () {
     var help = wx.getStorageSync('help');
