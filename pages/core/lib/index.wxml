@@ -1,0 +1,43 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/lib.png" />
+  <view class="page__title">图书馆藏</view>
+  <view class="page__desc">借阅排行榜排名为最近6个月前10名</view>
+</view>
+<view class="page__bd">
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">书名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="例如：挪威的森林" value="{{bookName}}" bindinput="bookNameInput" />
+      </view>
+    </view>
+  </view>
+  <view class="button-sp-area">
+    <button bindtap="search" class="weui-btn" type="primary" plain="true">查询书籍</button>
+  </view>
+  <view class="weui-panel" wx:if="{{info}}">
+    <view class="weui-panel__hd">借阅排行榜</view>
+    <view class="weui-panel__bd">
+      <navigator url="../../search/lib/detail?fbook={{book[0]}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{info}}" wx:key="*this" wx:for-item="book">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          {{index + 1}}
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{book[2]}}</view>
+          <view class="weui-media-box__desc">{{book[3]}}</view>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="zan-capsule zan-capsule" style="float:right;">
+            <view class="zan-capsule__left">{{book[4]}}</view>
+            <view class="zan-capsule__right">借阅次数</view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="button-sp-area">
+    <button open-type="share" class="weui-btn" type="primary" plain="true">分享借阅排行榜</button>
+  </view>
+</view>

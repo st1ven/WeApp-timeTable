@@ -1,0 +1,31 @@
+<view class="page__bd">
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+    </view>
+    <view class="weui-tab__panel">
+      <view class="weui-tab__content" hidden="{{activeIndex != k}}" wx:for-index="k" wx:for="{{tabs}}" wx:key="k_key">
+        <block wx:for="{{listData.data[0]}}" wx:for-item="i" wx:key="index">
+          <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__title weui-media-box__title_in-text">第{{index+1}}大节</view>
+            <view class="weui-media-box__info">
+              <block wx:for="{{i}}" wx:for-item="j" wx:key="i_key">
+                <block wx:if="{{i[index][k]!==null}}">
+                  <text class="weui-media-box__bold" wx:if="{{index % 4 == 0}}">{{i[index][k]}}\n</text>
+                  <text wx:else>{{i[index][k]}}\n</text>
+                </block>
+              </block>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="button-sp-area">
+        <button open-type="share" class="weui-btn" type="default" plain="true">分享查询结果</button>
+      </view>
+    </view>
+  </view>
+</view>

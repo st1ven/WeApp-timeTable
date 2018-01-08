@@ -8,7 +8,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.7.1",
+	"libVersion": "1.7.2",
 	"appid": "wx1de3425728815df0",
 	"projectname": "%E6%96%87%E7%BB%8F%E8%AF%BE%E8%A1%A8",
 	"condition": {
@@ -22,7 +22,50 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "发现更多",
+					"pathName": "pages/more/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "课表查询",
+					"pathName": "pages/core/table/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "空闲教室",
+					"pathName": "pages/core/room/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "图书馆藏",
+					"pathName": "pages/core/lib/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "考试安排",
+					"pathName": "pages/core/exam/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "今日课程设置",
+					"pathName": "pages/core/set/today",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "学号查询",
+					"pathName": "pages/search/id/index",
+					"query": ""
+				}
+			]
 		}
 	}
 }

@@ -1,0 +1,19 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/exam.png" />
+  <view class="page__desc">漏课、教室冲突请联系教务，具体安排以实际情况为准</view>
+</view>
+<view class="weui-panel__bd">
+  <view wx:for="{{listData}}" wx:for-item="list" wx:key="index" class="weui-media-box weui-media-box_text">
+    <view class="weui-media-box__title weui-media-box__title">{{list.time}}</view>
+    <view class="weui-media-box__info">
+      <view class="weui-media-box__Bold">{{list.name}}</view>
+      <view class="weui-media-box__text">{{list.room}}</view>
+      <view class="weui-media-box__text">{{list.class}}</view>
+      <view class="weui-media-box__right">
+        <text>{{list.num}}</text>人考试</view>
+    </view>
+  </view>
+  <view class="button-sp-area">
+    <button open-type="share" class="weui-btn" type="primary" plain="true">分享查询结果</button>
+  </view>
+</view>

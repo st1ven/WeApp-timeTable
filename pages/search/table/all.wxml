@@ -1,0 +1,33 @@
+<view class="table">
+  <view class="tr">
+    <view class="th idx"></view>
+    <view class="th">周一</view>
+    <view class="th">周二</view>
+    <view class="th">周三</view>
+    <view class="th">周四</view>
+    <view class="th">周五</view>
+    <view class="th">周六</view>
+    <view class="th">周日</view>
+  </view>
+  <block wx:for="{{listData.data[0]}}" wx:for-item="i" wx:key="listData_key">
+    <view class="tr">
+      <view class="td idx">{{index+1}}</view>
+      <view class="td" wx:for="{{[0,1,2,3,4,5,6]}}" wx:for-item="k" wx:key="td_key">
+        <block wx:for="{{i}}" wx:for-item="j" wx:key="i_key">
+          <block wx:if="{{index % 4 == 0}}">
+            <text class="weui-bold" wx:if="{{i[index][k]}}">{{i[index][k]}}\n</text>
+          </block>
+          <block wx:else>
+            <block wx:if="{{index % 4 == 2}}"></block>
+            <block wx:else>
+              <text wx:if="{{i[index][k]}}">{{i[index][k]}}\n</text>
+            </block>
+          </block>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="button-sp-area">
+  <button open-type="share" class="weui-btn" type="default" plain="true">分享查询结果</button>
+</view>

@@ -1,44 +1,92 @@
-    <view class="page">
-        <view class="page__hd">
-          <view class="page__title">第 <text class="bigTitle">{{td.week}}</text> 周</view>
-          <view class="page__desc">{{today}}　{{day}}</view>
+<view class="circle">
+  <view class="page__hd">
+    <view class="weui-panel border-shadow">
+      <navigator url="/pages/core/set/today" hover-class="none">
+        <view class="weui-panel__hd">
+          {{theDay}}
+          <image style="height:42rpx;width:42rpx;display:inline-block;verticle-align:middle;" src="/images/set_icon.png" />
         </view>
-        <view class="page__bd">
-          <view class="weui-grids">
-            <navigator url="/pages/index/student" class="weui-grid" hover-class="weui-grid_active">
-                <image class="weui-grid__icon" src="{{kb}}" />
-                <view class="weui-grid__label">班级课表</view>
-            </navigator>
-            <navigator url="/pages/index/teacher" class="weui-grid" hover-class="weui-grid_active">
-                <image class="weui-grid__icon" src="{{teacher}}" />
-                <view class="weui-grid__label">教师课表</view>
-            </navigator>
-            <navigator url="/pages/index/freeroom" class="weui-grid" hover-class="weui-grid_active">
-                <image class="weui-grid__icon" src="{{js}}" />
-                <view class="weui-grid__label">空闲教室</view>
-            </navigator>
-            <navigator url="/pages/index/exam" class="weui-grid" hover-class="weui-grid_active">
-                <image class="weui-grid__icon" src="{{exam}}" />
-                <view class="weui-grid__label">考试安排</view>
-            </navigator>
-            <navigator url="/pages/info/help" class="weui-grid" hover-class="weui-grid_active">
-                <image class="weui-grid__icon" src="{{help}}" />
-                <view class="weui-grid__label">使用帮助</view>
-            </navigator>
-            <navigator url="/pages/info/index" class="weui-grid" hover-class="weui-grid_active">
-                <image class="weui-grid__icon" src="{{about}}" />
-                <view class="weui-grid__label">关于课表</view>
-            </navigator>
-          </view>
-          <view class="weui-article weui-center info">
-              <view class="weui-article__section">
-                  <view class="weui-article__p">
-                      <text>{{info}}</text>
-                  </view>
-              </view>
-          </view>
+      </navigator>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box" wx:if="{{todayClassName == 'none'}}">
+          <button bindtap="setTodayClassName" class="weui-btn" type="primary" plain="true">绑定班级，获取每日课程信息</button>
+          <view class="weui-cells__tips">* 如已设置完成，请下拉刷新课程信息</view>
         </view>
-        <view class="weui-footer weui-article weui-footer_fixed-bottom">
-            <button open-type="share" class="weui-btn" type="default" plain="true">分享文经课表</button>
+        <view class="weui-media-box weui-media-box_appmsg" wx:else>
+          <block wx:if="{{today == 'error'}}">
+            <view class="weui-media-box__hd_in-appmsg">
+              ⚠
+            </view>
+            <view class="weui-media-box_text">
+              当前网络不可用，请检查
+            </view>
+          </block>
+          <block wx:elif="{{today.course == 'null'}}">
+            <view class="weui-media-box__hd_in-appmsg">
+              {{todayWeek.week}}
+            </view>
+            <view class="weui-media-box_text">
+              目前没课，休息一下吧
+            </view>
+          </block>
+          <block wx:else>
+            <view class="weui-media-box__hd_in-appmsg">
+              {{todayWeek.week}}
+            </view>
+            <view class="weui-media-box_text">
+              <block wx:for="{{today.course}}" wx:key="course_key" wx:for-item="course">
+                <view class="weui-media-box__title weui-media-box__title_in-text">{{course.name}}</view>
+                <view class="weui-media-box__info">
+                  <view class="weui-media-box__desc weui-media-box__info__meta">
+                    <image style="height:32rpx;width:32rpx;vertical-align:middle;" src="/images/location_icon.png" /> {{course.location}}</view>
+                  <view class="weui-media-box__desc weui-media-box__info__meta_extra">
+                    <image style="height:32rpx;width:32rpx;vertical-align:middle;" src="/images/time_icon.png" /> {{course.week}}</view>
+                </view>
+              </block>
+            </view>
+          </block>
         </view>
+      </view>
     </view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-panel">
+      <view class="weui-grids">
+        <navigator url="/pages/core/table/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="/images/tabbar/table.png" />
+          <view class="weui-grid__label">课表查询</view>
+        </navigator>
+        <navigator url="/pages/core/room/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="/images/tabbar/room.png" />
+          <view class="weui-grid__label">空闲教室</view>
+        </navigator>
+        <navigator url="/pages/core/lib/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="/images/tabbar/lib.png" />
+          <view class="weui-grid__label">图书馆藏</view>
+        </navigator>
+        <navigator url="/pages/core/exam/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="/images/tabbar/exam.png" />
+          <view class="weui-grid__label">考试安排</view>
+        </navigator>
+      </view>
+    </view>
+    <block wx:for="{{today.info}}" wx:key="info_key" wx:for-item="info">
+      <view class="weui-panel">
+        <view class="weui-panel__hd">
+          <image style="height:32rpx;width:32rpx;vertical-align:middle;margin-right:16rpx;" src="/images/info_icon.png" />
+          <text>{{info.title}}</text>
+        </view>
+        <block wx:if="{{info.content}}">
+          <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__desc">
+                <text>{{info.content}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </block>
+    <view class="weui-footer weui-center">- 我没有底线 -</view>
+  </view>
+</view>
