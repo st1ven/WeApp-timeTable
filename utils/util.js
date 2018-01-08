@@ -65,7 +65,7 @@ const getId = (params) => wxRequest(params, host + 'info&number=' + params.query
 
 // Lib
 const getLibList = (params) => wxRequest(params, host + 'book_list')
-const getLibSearch = (params) => wxRequest(params, host + 'book_search&name=' + params.query.name)
+const getLibSearch = (params) => wxRequest(params, host + 'book_search&name=' + params.query.name + '&page=' + params.query.page)
 const getLibInfo = (params) => wxRequest(params, host + 'book_info&fbook=' + params.query.fbook)
 
 //Time

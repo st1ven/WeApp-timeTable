@@ -37,7 +37,7 @@ Page({
       })
     } else {
       wx.navigateTo({
-        url: '../../search/lib/index?&name=' + this.data.bookName
+        url: '../../search/lib/index?&name=' + this.data.bookName + '&page=1'
       })
     }
   },

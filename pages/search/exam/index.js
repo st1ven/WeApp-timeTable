@@ -19,7 +19,12 @@ Page({
         if (listData.status == '1') {
           wx.showModal({
             content: '抱歉，未查询到当前考试安排信息',
-            showCancel: false
+            showCancel: false,
+            complete: function () {
+              wx.navigateBack({
+                delta: 1
+              })
+            }
           })
         } else {
           this.setData({ listData })

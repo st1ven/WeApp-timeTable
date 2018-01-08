@@ -70,3 +70,7 @@ button[type="default"][plain] {
   height: 40px;
   line-height: 40px;
 }
+
+.weui-media-box__desc {
+  -webkit-line-clamp: 1;
+}

@@ -11,7 +11,7 @@
 
 .page__desc {
   font-size: 13px;
-  color: #eee;
+  color: #f8f8f8;
 }
 
 .weui-media-box__thumb {

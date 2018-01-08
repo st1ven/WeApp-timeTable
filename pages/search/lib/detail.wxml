@@ -1,7 +1,8 @@
 <view class="page__hd">
   <image class="weui-media-box__thumb" src="/images/core/lib.png" />
   <view class="weui-media-box__title" style="font-size:40rpx;font-weight:bolder;color:#fff;">{{bookData.info.title}}</view>
-  <view class="page__desc">{{bookData.info.desc}}</view>
+  <view class="page__desc" style="font-size:30rpx;">{{bookData.info.author}}</view>
+  <view class="page__desc" style="color:#f8f8f8;;">{{bookData.info.desc}}</view>
 </view>
 <view class="weui-panel" wx:if="{{bookData.books}}">
   <view class="weui-panel__hd">馆藏信息</view>
@@ -22,9 +23,13 @@
             <view class="zan-capsule__left" style="background:#43B0D1;border-color:#43B0D1">在架上</view>
             <view class="zan-capsule__right" style="color:#43B0D1;border-color:#43B0D1">书刊状态</view>
           </block>
-          <block wx:else>
+          <block wx:elif="{{book[5] == '已借出'}}">
             <view class="zan-capsule__left">已借出</view>
             <view class="zan-capsule__right">书刊状态</view>
+          </block>
+          <block wx:else>
+            <view class="zan-capsule__left" style="background:#43B0D1;border-color:#43B0D1">{{book[5]}}</view>
+            <view class="zan-capsule__right" style="color:#43B0D1;border-color:#43B0D1">书刊状态</view>
           </block>
           </view>
         </view>
