@@ -50,6 +50,9 @@
     </view>
   </view>
   <view class="page__bd">
+    <view style="padding:5rpx 40rpx;" wx:if="{{help == 'none'}}">
+      <button bindtap="toHelp" class="weui-btn" style="font-size:26rpx;" type="default" plain="true">初次见面，不如看下使用帮助？</button>
+    </view>
     <view class="weui-panel">
       <view class="weui-grids">
         <navigator url="/pages/core/table/index" class="weui-grid" hover-class="weui-grid_active">

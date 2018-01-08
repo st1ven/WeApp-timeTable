@@ -7,12 +7,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    bookData: []
+    bookData: [],
+    page: ''
   },
   getLibSearch: function (options) {
     api.getLibSearch({
       query: {
-        name: options.name
+        name: options.name,
+        page: options.page
       },
       success: (res) => {
         let bookData = res.data
@@ -27,7 +29,7 @@ Page({
             }
           })
         } else {
-          this.setData({ bookData, bookName: options.name })
+          this.setData({ bookData, bookName: options.name, page: options.page })
           wx.setNavigationBarTitle({
             title: options.name + ' 查询结果'
           })
@@ -82,7 +84,12 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.setData({ page: parseInt(this.data.page) + 1 })
+    let arr = { name: this.options.name, page: this.data.page }
+    wx.pageScrollTo({
+      scrollTop: 0
+    })
+    this.getLibSearch(arr)
   },
 
   /**

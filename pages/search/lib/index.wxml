@@ -1,6 +1,7 @@
 <view class="page__hd">
   <image class="weui-media-box__thumb" src="/images/core/lib.png" />
-  <view class="weui-media-box__title" style="font-size:40rpx;font-weight:bolder;color:#fff;">{{bookName}}</view>
+  <view class="weui-media-box__title" style="font-size:40rpx;color:#fff;">{{bookName}}</view>
+  <view class="page__desc">- 第 {{page}} 页 -</view>
 </view>
 <view class="weui-panel" wx:if="{{bookData}}">
   <view class="weui-panel__hd">查询结果</view>
@@ -12,10 +13,14 @@
         <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
           <view class="weui-media-box__title">{{book[1]}}</view>
           <view class="weui-media-box__desc">{{book[2]}}</view>
+          <view class="weui-media-box__desc">{{book[3]}}</view>
         </view>
       </navigator>
     </view>
 </view>
 <view class="button-sp-area">
   <button open-type="share" class="weui-btn" type="primary" plain="true">分享查询结果</button>
+</view>
+<view style="padding-bottom:500rpx;">
+  <view class="page__desc" style="color:#999;text-align:center;">下拉加载下一页...</view>
 </view>

@@ -32,6 +32,12 @@ Page({
       }
     })
   },
+  toHelp: function () {
+    wx.setStorageSync('help', '1')
+    wx.navigateTo({
+      url: '../more/help'
+    })
+  },
   setTodayClassName: function () {
     wx.navigateTo({
       url: '../core/set/today'
@@ -42,9 +48,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let help = wx.getStorageSync('help') ? wx.getStorageSync('help') : 'none';
     let todayClassName = wx.getStorageSync('todayClassName') ? wx.getStorageSync('todayClassName') : 'none';
     this.getToday(todayClassName)
-    this.setData({ todayClassName })
+    this.setData({ help, todayClassName })
   },
 
   /**
