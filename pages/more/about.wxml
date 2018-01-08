@@ -1,2 +1,22 @@
-<!--pages/more/about.wxml-->
-<text>pages/more/about.wxml</text>
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/table.png" />
+  <view class="page__title">「文经课表」2.0.0108</view>
+  <view class="page__desc">提供烟台大学文经学院在校生班级与教师课表和空闲教室、图书馆藏及考试安排等查询服务。</view>
+</view>
+<view class="page__bd">
+  <view class="weui-article">
+    <view class="weui-article__p">「文经课表」诚挚的欢迎公众号关联小程序，并期待与您合作。（AppID：wx1de3425728815df0）</view>
+    <view class="weui-article__p" style="color:#43B0D1;">数据来源：</view>
+    <view class="weui-article__p">· 班级、教师课表和空教室数据来自文经官方教务网站</view>
+    <view class="weui-article__p">· 图书馆藏数据来自文经官方图书馆网站</view>
+    <view class="weui-article__p">· 考试安排数据来自教务发布的期末考试日程表张贴版</view>
+    <view class="weui-article__p" style="color:#43B0D1;">技术支持：</view>
+    <view class="weui-article__p">· 建1604-1 桑子金</view>
+    <view class="weui-article__p">· QQ：17878127 / Wechat：qq690204663</view>
+    <view class="weui-article__p">目前课表的功能正在逐渐增加中，立志成为文经学子的小帮手。如果你在使用中有问题或建议，请点击下方联系客服。</view>
+    <view class="weui-center">
+      <button class="weui-btn mini-btn" size="mini" open-type="contact">联系客服</button>
+      <button class="weui-btn mini-btn" size="mini" open-type="share">分享朋友</button>
+    </view>
+  </view>
+</view>

@@ -19,11 +19,7 @@
         </view>
         <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
           <view class="zan-capsule zan-capsule" style="float:right;">
-          <block wx:if="{{book[5] == '在架上'}}">
-            <view class="zan-capsule__left" style="background:#43B0D1;border-color:#43B0D1">在架上</view>
-            <view class="zan-capsule__right" style="color:#43B0D1;border-color:#43B0D1">书刊状态</view>
-          </block>
-          <block wx:elif="{{book[5] == '已借出'}}">
+          <block wx:if="{{book[5] == '已借出'}}">
             <view class="zan-capsule__left">已借出</view>
             <view class="zan-capsule__right">书刊状态</view>
           </block>

@@ -20,6 +20,10 @@
 			"current": -1,
 			"list": []
 		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": -1,
 			"list": [
@@ -63,6 +67,18 @@
 					"id": -1,
 					"name": "学号查询",
 					"pathName": "pages/search/id/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "使用帮助",
+					"pathName": "pages/more/help",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于课表",
+					"pathName": "pages/more/about",
 					"query": ""
 				}
 			]
