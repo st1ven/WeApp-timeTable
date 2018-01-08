@@ -1,0 +1,21 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/lib.png" />
+  <view class="weui-media-box__title" style="font-size:40rpx;font-weight:bolder;color:#fff;">{{bookName}}</view>
+</view>
+<view class="weui-panel" wx:if="{{bookData}}">
+  <view class="weui-panel__hd">查询结果</view>
+    <view class="weui-panel__bd">
+      <navigator url="../../search/lib/detail?fbook={{book[0]}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{bookData}}" wx:key="*this" wx:for-item="book">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          {{index + 1}}
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{book[1]}}</view>
+          <view class="weui-media-box__desc">{{book[2]}}</view>
+        </view>
+      </navigator>
+    </view>
+</view>
+<view class="button-sp-area">
+  <button open-type="share" class="weui-btn" type="primary" plain="true">分享查询结果</button>
+</view>

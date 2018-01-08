@@ -1,0 +1,20 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/room.png" />
+  <view class="page__title">考试安排</view>
+  <view class="page__desc">漏课、教室冲突请联系教务，具体安排以实际情况为准</view>
+</view>
+<view class="page__bd">
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">班级</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="例如：会1601-5" value="{{className}}" bindinput="classNameInput" />
+      </view>
+    </view>
+  </view>
+  <view class="button-sp-area">
+    <button bindtap="search" class="weui-btn" type="primary" plain="true">查询考试安排</button>
+  </view>
+</view>

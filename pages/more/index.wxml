@@ -1,0 +1,87 @@
+<view class="circle">
+  <view class="page__hd">
+    <navigator url="/pages/search/id/index" hover-class="none">
+      <view class="weui-item border-shadow background-1">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="weui-item__title">
+              学号查询
+            </view>
+            <view class="weui-item__desc">Student ID Inquiry</view>
+          </view>
+          <view class="weui-flex__item">
+            <image class="weui-media-box__thumb" style="width:80rpx;height:80rpx;float:right;" src="/images/search_icon.png" />
+          </view>
+        </view>
+      </view>
+    </navigator>
+    <navigator url="/pages/more/help" hover-class="none">
+      <view class="weui-item border-shadow background-2">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="weui-item__title">
+              使用帮助
+            </view>
+            <view class="weui-item__desc">Instructions</view>
+          </view>
+          <view class="weui-flex__item">
+            <image class="weui-media-box__thumb" style="width:80rpx;height:80rpx;float:right;" src="/images/help_icon.png" />
+          </view>
+        </view>
+      </view>
+    </navigator>
+    <button class="clear" open-type="contact">
+      <view class="weui-item border-shadow background-1">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="weui-item__title">
+              联系客服
+            </view>
+            <view class="weui-item__desc">Contact Us</view>
+          </view>
+          <view class="weui-flex__item">
+            <image class="weui-media-box__thumb" style="width:80rpx;height:80rpx;float:right;" src="/images/service_icon.png" />
+          </view>
+        </view>
+      </view>
+    </button>
+    <button class="clear" open-type="share">
+      <view class="weui-item border-shadow background-2">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="weui-item__title">
+              分享课表
+            </view>
+            <view class="weui-item__desc">Share</view>
+          </view>
+          <view class="weui-flex__item">
+            <image class="weui-media-box__thumb" style="width:80rpx;height:80rpx;float:right;" src="/images/share_icon.png" />
+          </view>
+        </view>
+      </view>
+    </button>
+    <navigator url="/pages/more/about" hover-class="none">
+      <view class="weui-item border-shadow background-1">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="weui-item__title">
+              关于课表
+            </view>
+            <view class="weui-item__desc">About</view>
+          </view>
+          <view class="weui-flex__item">
+            <image class="weui-media-box__thumb" style="width:80rpx;height:80rpx;float:right;" src="/images/about_icon.png" />
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class="page__bd">
+    <view class="weui-footer weui-footer_fixed-bottom">
+      <view class="weui-footer__links">
+        <navigator url="/pages/more/about" class="weui-footer__link">© 文经课表</navigator>
+      </view>
+      <view class="weui-footer__text">Powered by SangSir.Com</view>
+    </view>
+  </view>
+</view>

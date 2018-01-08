@@ -1,22 +1,44 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/index/student",
-    "pages/index/teacher",
-    "pages/index/freeroom",
-    "pages/index/exam",
-    "pages/info/index",
-    "pages/info/help",
-    "pages/search/today",
-    "pages/search/all",
-    "pages/search/freeroom",
-    "pages/search/exam"
+    "pages/more/index",
+    "pages/more/help",
+    "pages/more/about",
+    "pages/core/table/index",
+    "pages/core/room/index",
+    "pages/core/lib/index",
+    "pages/core/exam/index",
+    "pages/core/set/today",
+    "pages/search/table/today",
+    "pages/search/table/all",
+    "pages/search/room/index",
+    "pages/search/lib/index",
+    "pages/search/lib/detail",
+    "pages/search/exam/index",
+    "pages/search/id/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#FFF",
+  "window": {
+    "navigationBarBackgroundColor": "#43B0D1",
+    "backgroundColor": "#43B0D1",
     "navigationBarTitleText": "文经课表",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "light"
   },
-  "debug": false
+  "tabBar": {
+    "selectedColor": "#43B0D1",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabbar/index.png",
+        "selectedIconPath": "images/tabbar/index@select.png",
+        "text": "课表首页"
+      },
+      {
+        "pagePath": "pages/more/index",
+        "iconPath": "images/tabbar/more.png",
+        "selectedIconPath": "images/tabbar/more@select.png",
+        "text": "发现更多"
+      }
+    ]
+  }
 }

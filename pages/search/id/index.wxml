@@ -1,0 +1,100 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/search_icon.png" />
+  <view class="page__title">学号查询</view>
+  <view class="page__desc">根据学号获取学生基本信息</view>
+</view>
+<view class="page__bd">
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">学号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="number" placeholder="例如：201608504112" bindinput="studentIDInput" />
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__tips">* 不妨搜一下例如中的学号</view>
+  <view class="button-sp-area">
+    <button bindtap="searchStudentID" class="weui-btn" type="primary" plain="true">查询学生信息</button>
+    <block wx:if="{{info.sex == '男'}}">
+      <view class="weui-item border-shadow background-1">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="weui-item__title">
+              {{info.name}} / {{info.class}}
+            </view>
+            <view class="weui-item__desc">
+              {{info.sex}} / {{info.education}} / {{info.department}}
+            </view>
+          </view>
+          <view class="weui-flex__item">
+            <image class="weui-media-box__thumb" style="width:80rpx;height:80rpx;float:right;" src="/images/user_icon.png" />
+          </view>
+        </view>
+        <view class="weui-flex" style="margin-top:20rpx;justify-content:space-between;">
+          <view class="weui-flex__item">
+            <view class="weui-item__desc">
+              <text>{{info.allow_borrow}}\n允许借阅册数</text>
+            </view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="weui-item__desc">
+              <text>{{info.have_borrow}}\n已借阅册数</text>
+            </view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="weui-item__desc">
+              <text>{{info.borrow_count}}\n借书量统计</text>
+            </view>
+          </view>
+        </view>
+        <block wx:if="{{info.number == '201608504112'}}">
+          <view class="weui-flex" style="margin-top:20rpx;">
+            <view class="weui-flex__item">
+              <view class="weui-item__desc">
+                我的天呐！你竟然搜到了英俊潇洒、风流倜傥、玉树临风、年少多金、谦虚好学、不耻下问、聪明伶俐、头脑精明、举世无双、人之表率、诚实可信、英勇无比、道德榜样、知识渊博、才高八斗、光明磊落、公正无私、震古烁今，文经第一大英雄大豪杰大侠客大宗师，人送绰号上天下地无所不能玉面小飞龙，英俊与智慧的化身，文经课表的创造者桑子金。谢谢你长得那么好看还愿意查询我的信息！
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <button open-type="share" class="weui-btn" type="primary" plain="true">分享学号查询</button>
+    </block>
+    <block wx:if="{{info.sex == '女'}}">
+      <view class="weui-item border-shadow background-2">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="weui-item__title">
+              {{info.name}} / {{info.class}}
+            </view>
+            <view class="weui-item__desc">
+              {{info.sex}} / {{info.education}} / {{info.department}}
+            </view>
+          </view>
+          <view class="weui-flex__item">
+            <image class="weui-media-box__thumb" style="width:80rpx;height:80rpx;float:right;" src="/images/user_icon.png" />
+          </view>
+        </view>
+        <view class="weui-flex" style="margin-top:20rpx;justify-content:space-between;">
+          <view class="weui-flex__item">
+            <view class="weui-item__desc">
+              <text>{{info.allow_borrow}}\n允许借阅册数</text>
+            </view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="weui-item__desc">
+              <text>{{info.have_borrow}}\n已借阅册数</text>
+            </view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="weui-item__desc">
+              <text>{{info.borrow_count}}\n借书量统计</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <button open-type="share" class="weui-btn" type="primary" plain="true">分享学号查询</button>
+    </block>
+  </view>
+</view>

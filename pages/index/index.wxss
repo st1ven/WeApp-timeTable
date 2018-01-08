@@ -1,24 +1,116 @@
-.page__hd  {
-    background-color: #2b2d42;
-    color: #FFF;
-    text-align: center;
-    padding: .5rem 0 3rem;
+page {
+  background-color: #f8f8f8;
 }
-.page__title {
-    font-weight: bold;
+
+.page__bd, .weui-panel {
+  margin-top: 30rpx;
 }
-.bigTitle {
-    font-size: 3.2rem;
+
+.page__hd {
+  padding: 20rpx 35rpx 0 35rpx;
 }
-.page__desc {
-    color: #FFF;
-    font-size: .9rem;
+
+.weui-footer {
+  margin: 50rpx 0;
 }
+
 .weui-center {
-    text-align: center;
+  text-align: center;
 }
-.info {
-    color: #888;
-    font-size: .8rem;
-    padding-top: 1rem;
+
+.border-shadow {
+  border: 1px #dee1e8 solid;
+  border-radius: 15rpx;
+  box-shadow: 0 10rpx 35rpx #dee1e8;
+}
+
+.border-shadow .weui-panel__hd {
+  padding: 15rpx 30rpx 15rpx;
+  font-size: 15px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weui-panel__hd {
+  color: #333;
+  font-size: 15px;
+  padding: 10px 15px;
+}
+
+.weui-panel__hd:after {
+  left: 0px;
+}
+
+.border-shadow .weui-media-box__info {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.border-shadow .weui-media-box {
+  padding: 30rpx;
+}
+
+.border-shadow .weui-media-box__hd_in-appmsg {
+  height: auto;
+  line-height: 0;
+  font-size: 80rpx;
+  font-weight: bolder;
+  color: #43b0d1;
+  margin-right: 0.3em;
+}
+
+.border-shadow .weui-media-box__thumb {
+  height: 48px;
+  width: 48px;
+}
+
+.weui-grid {
+  padding: 10px 10px;
+  color: #333;
+  width: 25%;
+}
+
+.weui-grid__icon {
+  width: 81rpx;
+  height: 81rpx;
+}
+
+.weui-panel:before, .weui-panel:after, .weui-grids, .weui-grid {
+  border: 0;
+}
+
+.weui-media-box__desc {
+  display: inherit;
+  line-height: 1.8;
+  color: #555;
+}
+
+button[type="primary"][plain] {
+  color: #fff;
+  border: 1px solid #96deda;
+  background-image: linear-gradient(-45deg, #96deda 0%, #8ec5fc 100%);
+}
+
+.button-hover[type="primary"][plain] {
+  color: #fff;
+  border-color: #96deda;
+  opacity: 0.6;
+}
+
+button[type="default"][plain] {
+  color: #fff;
+  border: 1px solid #fbc2eb;
+  background-image: linear-gradient(-45deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.button-hover[type="default"][plain] {
+  color: #fff;
+  border-color: #fbc2eb;
+  opacity: 0.6;
+}
+
+.weui-cells__tips {
+  padding-left: 0px;
 }

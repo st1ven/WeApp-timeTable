@@ -1,0 +1,37 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/lib.png" />
+  <view class="weui-media-box__title" style="font-size:40rpx;font-weight:bolder;color:#fff;">{{bookData.info.title}}</view>
+  <view class="page__desc">{{bookData.info.desc}}</view>
+</view>
+<view class="weui-panel" wx:if="{{bookData.books}}">
+  <view class="weui-panel__hd">馆藏信息</view>
+  <view class="weui-panel__bd">
+    <block wx:for="{{bookData.books}}" wx:key="*this" wx:for-item="book">
+      <view class="weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          {{index + 1}}
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{book[0]}}</view>
+          <view class="weui-media-box__desc">{{book[3]}}</view>
+          <view class="weui-media-box__desc" wx:if="{{book[4]}}">{{book[4]}} 借出</view>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="zan-capsule zan-capsule" style="float:right;">
+          <block wx:if="{{book[5] == '在架上'}}">
+            <view class="zan-capsule__left" style="background:#43B0D1;border-color:#43B0D1">在架上</view>
+            <view class="zan-capsule__right" style="color:#43B0D1;border-color:#43B0D1">书刊状态</view>
+          </block>
+          <block wx:else>
+            <view class="zan-capsule__left">已借出</view>
+            <view class="zan-capsule__right">书刊状态</view>
+          </block>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="button-sp-area">
+  <button open-type="share" class="weui-btn" type="primary" plain="true">分享书籍</button>
+</view>
