@@ -114,3 +114,19 @@ button[type="default"][plain] {
 .weui-cells__tips {
   padding-left: 0px;
 }
+
+.page__hd .weui-media-box__title {
+  font-size: 30rpx;
+}
+
+.page__hd .weui-media-box__title_in-text {
+  margin-bottom: 0;
+}
+
+.page__hd .weui-media-box__desc {
+  font-size: 19rpx;
+}
+
+.page__hd .weui-panel__hd {
+  font-size: 30rpx;
+}

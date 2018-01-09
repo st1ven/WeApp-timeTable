@@ -38,9 +38,9 @@
                 <view class="weui-media-box__title weui-media-box__title_in-text">{{course.name}}</view>
                 <view class="weui-media-box__info">
                   <view class="weui-media-box__desc weui-media-box__info__meta">
-                    <image style="height:32rpx;width:32rpx;vertical-align:middle;" src="/images/location_icon.png" /> {{course.location}}</view>
+                    <image style="height:24rpx;width:24rpx;vertical-align:middle;" src="/images/location_icon.png" /> {{course.location}}</view>
                   <view class="weui-media-box__desc weui-media-box__info__meta_extra">
-                    <image style="height:32rpx;width:32rpx;vertical-align:middle;" src="/images/time_icon.png" /> {{course.week}}</view>
+                    <image style="height:24rpx;width:24rpx;vertical-align:middle;" src="/images/time_icon.png" /> {{course.week}}</view>
                 </view>
               </block>
             </view>
