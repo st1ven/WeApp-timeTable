@@ -56,3 +56,7 @@ button[type="default"][plain] {
   -webkit-flex: auto;
   flex: auto;
 }
+
+.weui-flex .weui-cell__bd {
+  font-size: 27rpx;
+}

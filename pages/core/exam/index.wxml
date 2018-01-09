@@ -14,6 +14,9 @@
       </view>
     </view>
   </view>
+  <view class="weui-cells__tips">* 不知道所在班级？
+    <navigator url="/pages/search/id/index" class="click-search">点此查询</navigator>
+  </view>
   <view class="button-sp-area">
     <button bindtap="search" class="weui-btn" type="primary" plain="true">查询考试安排</button>
   </view>

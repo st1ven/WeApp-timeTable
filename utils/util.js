@@ -69,7 +69,8 @@ const getLibSearch = (params) => wxRequest(params, host + 'book_search&name=' + 
 const getLibInfo = (params) => wxRequest(params, host + 'book_info&fbook=' + params.query.fbook)
 
 //Time
-const getDate = () => new Date().toLocaleDateString()
+const newDate = new Date()
+const getDate = () => newDate.getFullYear() + '/' + (newDate.getMonth()+1) + '/' + newDate.getDate()
 const getDay = () => " 星期" + "日一二三四五六".charAt(new Date().getDay())
 
 module.exports = {

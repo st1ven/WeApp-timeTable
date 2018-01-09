@@ -14,7 +14,7 @@
       </view>
     </view>
   </view>
-  <view class="weui-cells__tips">不知道所在班级？
+  <view class="weui-cells__tips">* 不知道所在班级？
     <navigator url="/pages/search/id/index" class="click-search">点此查询</navigator>
   </view>
   <view class="button-sp-area">

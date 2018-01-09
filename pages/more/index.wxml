@@ -78,9 +78,6 @@
   </view>
   <view class="page__bd">
     <view class="weui-footer weui-footer_fixed-bottom">
-      <view class="weui-footer__links">
-        <navigator url="/pages/more/about" class="weui-footer__link">© 文经课表</navigator>
-      </view>
       <view class="weui-footer__text">Powered by SangSir.Com</view>
     </view>
   </view>

@@ -46,3 +46,8 @@ button[type="default"][plain] {
   border-color: #fbc2eb;
   opacity: 0.6;
 }
+
+.click-search {
+  display: inline-block;
+  color: #586c94;
+}

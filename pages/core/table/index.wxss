@@ -84,3 +84,8 @@ button[type="default"][plain] {
 .weui-tab__panel {
   padding-top: 0;
 }
+
+.click-search {
+  display: inline-block;
+  color: #586c94;
+}
