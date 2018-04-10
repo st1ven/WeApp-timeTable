@@ -6,7 +6,7 @@
  - 更多详情、截图与介绍请查看产品页：[https://lab.sangsir.com/kb/](https://lab.sangsir.com/kb/)
  - 本项目现已加入**高校微信小程序开发大赛**，**请勿使用**本项目进行二次参赛。
 
-[![文经课表设计图](http://ww2.sinaimg.cn/large/005zWjpngy1fq7eki3u60j31p41b8qsa.jpg)]
+![文经课表设计图](http://ww2.sinaimg.cn/large/005zWjpngy1fq7eki3u60j31p41b8qsa.jpg)
 
 2018.03.31 备注：
 
