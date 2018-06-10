@@ -1,0 +1,53 @@
+.page__hd {
+  padding: 30rpx 35rpx;
+  text-align: center;
+  background-image: linear-gradient(to top, #96deda 0%, #43b0d1 100%);
+  box-shadow: 0 10rpx 35rpx #dee1e8;
+}
+
+.page__title {
+  color: #fff;
+}
+
+.page__desc {
+  font-size: 13px;
+  color: #f8f8f8;
+}
+
+.weui-media-box__thumb {
+  height: 35px;
+  width: 35px;
+}
+
+.button-sp-area {
+  padding: 30rpx 35rpx;
+}
+
+button[type="primary"][plain] {
+  color: #fff;
+  border: 1px solid #96deda;
+  background-image: linear-gradient(-45deg, #96deda 0%, #8ec5fc 100%);
+}
+
+.button-hover[type="primary"][plain] {
+  color: #fff;
+  border-color: #96deda;
+  opacity: 0.6;
+}
+
+button[type="default"][plain] {
+  color: #fff;
+  border: 1px solid #fbc2eb;
+  background-image: linear-gradient(-45deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.button-hover[type="default"][plain] {
+  color: #fff;
+  border-color: #fbc2eb;
+  opacity: 0.6;
+}
+
+.click-search {
+  display: inline-block;
+  color: #586c94;
+}

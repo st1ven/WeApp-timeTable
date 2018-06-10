@@ -37,6 +37,27 @@ Page({
       }
     })
   },
+  getNextLibSearch: function (options) {
+    api.getLibSearch({
+      query: {
+        name: options.name,
+        page: options.page
+      },
+      success: (res) => {
+        let bookData = this.data.bookData
+        let nextBookData = res.data
+        this.setData({ bookData: bookData.concat(nextBookData), bookName: options.name, page: options.page })
+        wx.setNavigationBarTitle({
+          title: options.name + ' 查询结果'
+        })
+      }
+    })
+  },
+  backIndex: function () {
+    wx.reLaunch({
+      url: '/pages/index/index'
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -86,10 +107,7 @@ Page({
   onReachBottom: function () {
     this.setData({ page: parseInt(this.data.page) + 1 })
     let arr = { name: this.options.name, page: this.data.page }
-    wx.pageScrollTo({
-      scrollTop: 0
-    })
-    this.getLibSearch(arr)
+    this.getNextLibSearch(arr)
   },
 
   /**

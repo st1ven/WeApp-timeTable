@@ -25,6 +25,7 @@
       </view>
       <view class="button-sp-area">
         <button open-type="share" class="weui-btn" type="default" plain="true">分享查询结果</button>
+        <button bindtap="backIndex" class="weui-btn" type="primary" plain="true">返回到首页</button>
       </view>
     </view>
   </view>

@@ -33,7 +33,7 @@ const wxRequest = (params, url) => {
     method: params.method || 'GET',
     data: params.data || {},
     header: {
-      'Content-Type': 'application/json'
+      'Content-Type': params.headerType || 'application/json'
     },
     success: (res) => {
       params.success && params.success(res)
@@ -68,6 +68,19 @@ const getLibList = (params) => wxRequest(params, host + 'book_list')
 const getLibSearch = (params) => wxRequest(params, host + 'book_search&name=' + params.query.name + '&page=' + params.query.page)
 const getLibInfo = (params) => wxRequest(params, host + 'book_info&fbook=' + params.query.fbook)
 
+// News
+const getNewsList = (params) => wxRequest(params, host + 'news_list&page=' + params.query.page)
+const getNewsDetail = (params) => wxRequest(params, host + 'news_detail&id=' + params.query.id)
+
+// Check
+const wxLogin = (params) => wxRequest(params, host + 'wxlogin&code=' + params.query.code)
+const joinCheck = (params) => wxRequest(params, host + 'join_check')
+const getUserInfo = (params) => wxRequest(params, host + 'check_userinfo&openid=' + params.query.openid)
+const userCheckIn = (params) => wxRequest(params, host + 'check_in')
+const getCheckList = (params) => wxRequest(params, host + 'check_list' + '&page=' + params.query.page)
+const getCheckInfo = (params) => wxRequest(params, host + 'check_info')
+const userCheckUp = (params) => wxRequest(params, host + 'check_up&openid=' + params.query.openid + '&status=' + params.query.status)
+
 //Time
 const newDate = new Date()
 const getDate = () => newDate.getFullYear() + '/' + (newDate.getMonth()+1) + '/' + newDate.getDate()
@@ -83,6 +96,15 @@ module.exports = {
   getLibList,
   getLibSearch,
   getLibInfo,
+  getNewsList,
+  getNewsDetail,
+  wxLogin,
+  joinCheck,
+  getUserInfo,
+  userCheckIn,
+  getCheckList,
+  getCheckInfo,
+  userCheckUp,
   getDate,
   getDay
 }

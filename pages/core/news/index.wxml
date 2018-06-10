@@ -1,0 +1,26 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/news.png" />
+  <view class="page__title">文经新闻</view>
+  <view class="page__desc">文经的动态，你我看得见</view>
+</view>
+<view class="weui-panel__bd" wx:if="{{newsData}}">
+  <navigator url="/pages/core/news/detail?id={{news['id']}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{newsData}}" wx:key="index" wx:for-item="news">
+    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+      {{index + 1}}
+    </view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+      <view class="weui-media-box__title">{{news['title']}}</view>
+      <view class="weui-media-box__desc">{{news['desc']}}</view>
+      <view class="weui-media-box__info">
+        <view class="weui-media-box__info__meta">{{news['CAT']}}</view>
+        <view class="weui-media-box__info__meta">{{news['time']}}</view>
+      </view>
+    </view>
+  </navigator>
+</view>
+<view class="button-sp-area">
+  <button open-type="share" class="weui-btn" type="primary" plain="true">分享文经新闻</button>
+</view>
+<view style="padding-bottom:500rpx;">
+  <view class="page__desc" style="color:#999;text-align:center;">上拉加载更多信息...</view>
+</view>

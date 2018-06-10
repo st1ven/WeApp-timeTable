@@ -1,0 +1,13 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/news.png" />
+  <view class="page__title">知小味</view>
+  <view class="page__desc">文经学院非官方校园助手，查成绩、课表、学分、校园卡余额等超多实用功能，欢迎关注公众号：知小味</view>
+</view>
+<view class="page__bd">
+  <view class="weui-article">
+    <import src="../../utils/wxParse/wxParse.wxml" />
+    <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+</view>

@@ -20,7 +20,8 @@
 </view>
 <view class="button-sp-area">
   <button open-type="share" class="weui-btn" type="primary" plain="true">分享查询结果</button>
+  <button bindtap="backIndex" class="weui-btn" type="primary" plain="true">返回到首页</button>
 </view>
 <view style="padding-bottom:500rpx;">
-  <view class="page__desc" style="color:#999;text-align:center;">下拉加载下一页...</view>
+  <view class="page__desc" style="color:#999;text-align:center;">上拉加载更多信息...</view>
 </view>

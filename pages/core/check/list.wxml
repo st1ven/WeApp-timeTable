@@ -1,0 +1,47 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/check.png" />
+  <view class="page__title">打卡团的小伙伴们</view>
+  <view class="page__desc">打卡总人数：{{check_info.count}}人，我们期待更多的小伙伴加入</view>
+</view>
+<view class="page__bd">
+  <view class="weui-panel__bd">
+    <view class="weui-cells__title">🏆 本日第一名</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image src="{{check_info.first.info.avatarurl}}" style="width:100%;height:100%;border-radius:50%;vertical-align:top;" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{check_info.first.info.nickname}}</view>
+          <view class="weui-media-box__desc">{{check_info.first.check.content}}</view>
+          <view class="weui-media-box__info">
+            <view class="weui-media-box__info__meta">{{check_info.first.check.datetime}}</view>
+            <view class="weui-media-box__info__meta">打卡{{check_info.first.info.count}}天</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">最新打卡信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view wx:for="{{info}}" wx:for-item="list" wx:key="index" class="weui-cell">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image src="{{list.avatarurl}}" style="width:100%;height:100%;border-radius:50%;vertical-align:top;" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{list.nickname}}</view>
+          <view class="weui-media-box__desc">{{list.content}}</view>
+          <view class="weui-media-box__info">
+            <view class="weui-media-box__info__meta">{{list.datetime}}</view>
+            <view class="weui-media-box__info__meta">打卡{{list.count}}天</view>
+            <view class="weui-media-box__info__meta" style="float: right;">
+              <button class="btn-checkup {{list.hasChange? 'btn-checkup-click': ''}}" bindtap="praiseThis" data-openid="{{list.openid}}" data-curIndex="{{index}}" type="default" plain="true">♡ {{list.up}}</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view style="padding:100rpx 0 500rpx 0;">
+  <view class="page__desc" style="color:#999;text-align:center;">上拉加载更多信息...</view>
+</view>

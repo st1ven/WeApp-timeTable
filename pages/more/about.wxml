@@ -1,6 +1,6 @@
 <view class="page__hd">
   <image class="weui-media-box__thumb" src="/images/core/table.png" />
-  <view class="page__title">「文经课表」2.0.0109</view>
+  <view class="page__title">「文经课表」2.2.0609</view>
   <view class="page__desc">提供烟台大学文经学院在校生班级与教师课表和空闲教室、图书馆藏及考试安排等查询服务。</view>
 </view>
 <view class="page__bd">
@@ -10,6 +10,7 @@
     <view class="weui-article__p">· 班级、教师课表和空教室数据来自文经官方教务网站</view>
     <view class="weui-article__p">· 图书馆藏数据来自文经官方图书馆网站</view>
     <view class="weui-article__p">· 考试安排数据来自教务发布的期末考试日程表张贴版</view>
+    <view class="weui-article__p">· 文经新闻数据来自文经官方网站文经要闻栏目</view>
     <view class="weui-article__p" style="color:#43B0D1;">技术支持：</view>
     <view class="weui-article__p">· 建1604-1 桑子金</view>
     <view class="weui-article__p">· QQ：17878127 / Wechat：qq690204663</view>

@@ -71,6 +71,22 @@
           <image class="weui-grid__icon" src="/images/tabbar/exam.png" />
           <view class="weui-grid__label">考试安排</view>
         </navigator>
+        <navigator url="/pages/core/news/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="/images/tabbar/news.png" />
+          <view class="weui-grid__label">文经新闻</view>
+        </navigator>
+        <navigator url="/pages/core/check/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="/images/tabbar/check.png" />
+          <view class="weui-grid__label">早起打卡</view>
+        </navigator>
+        <navigator url="/pages/more/zhiwei" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="/images/tabbar/urp.png" />
+          <view class="weui-grid__label">教务查询</view>
+        </navigator>
+        <navigator url="/pages/core/calendar/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="/images/tabbar/calendar.png" />
+          <view class="weui-grid__label">文经校历</view>
+        </navigator>
       </view>
     </view>
     <block wx:for="{{today.info}}" wx:key="info_key" wx:for-item="info">

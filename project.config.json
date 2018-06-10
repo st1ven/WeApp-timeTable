@@ -8,7 +8,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.7.2",
+	"libVersion": "1.9.9",
 	"appid": "wx1de3425728815df0",
 	"projectname": "%E6%96%87%E7%BB%8F%E8%AF%BE%E8%A1%A8",
 	"condition": {
@@ -17,6 +17,10 @@
 			"list": []
 		},
 		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
 			"current": -1,
 			"list": []
 		},
@@ -79,6 +83,42 @@
 					"id": -1,
 					"name": "关于课表",
 					"pathName": "pages/more/about",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "文经新闻",
+					"pathName": "pages/core/news/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "早起打卡",
+					"pathName": "pages/core/check/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于打卡",
+					"pathName": "pages/core/check/about",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "打卡列表",
+					"pathName": "pages/core/check/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "文经校历",
+					"pathName": "pages/core/calendar/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "教务查询",
+					"pathName": "pages/more/zhiwei",
 					"query": ""
 				}
 			]

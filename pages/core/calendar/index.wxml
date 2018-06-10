@@ -1,0 +1,12 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/table.png" />
+  <view class="page__title">文经校历</view>
+  <view class="page__desc">校历来自教务网站，具体安排以实际情况为准</view>
+</view>
+<view class="page__bd">
+  <image style="width:100%" mode="widthFix" src="https://wechat.sangsir.com/timetable/data/calendar/main.jpg"></image>
+  <image style="width:100%" mode="widthFix" src="https://wechat.sangsir.com/timetable/data/calendar/desc.jpg"></image>
+</view>
+<view class="button-sp-area">
+  <button open-type="share" class="weui-btn" type="primary" plain="true">分享文经校历</button>
+</view>

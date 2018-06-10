@@ -1,0 +1,19 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/check.png" />
+  <view class="page__title">欢迎加入文经早起打卡团</view>
+  <view class="page__desc">时光会见证，你的努力与成长</view>
+</view>
+<view class="page__bd">
+  <view class="weui-article">
+    <view class="weui-article__p">　　每个人都希望自己能变得更好，更强，更厉害。为了让自己变得更厉害，每个人都有一些自己想要去坚持的事情。我也一样，从小到大，我列过的计划，对自己发过的誓，写出来都要绕地球好几圈了。然而，如果我问一问自己，都有哪些计划坚持下来了？我发现，除了在学校、工作的要求下坚持的事情，其它就只剩下吃饭睡觉玩游戏了。练字、画画、英语口语、听力、钢琴等等这些事情，从来都是开始的时候信誓旦旦，回头一看却很惨：80%的计划可能坚持不过一周，90%的计划熬不过两个星期。最终，所有要坚持的事情都被自己荒废了。</view>
+    <view class="weui-article__p">　　几天前，为了让自己每天的计划能够得到更好的完成和坚持，我在豆瓣上找到一个帖子，每天早晚去打卡，希望能通过陌生人的监督，让自己增加一点完成和坚持的动力。在这期间，我见证了许多小伙伴们的成长和改变，我看到味茗同学单词打卡坚持了一千多天，看到Chen同学考上复旦的研究生，看到依鸿医生一次性完成5项高强度的百日计划，看到各个小伙伴们不断的开拓自己的人生边界：练字、画画、学钢琴、跳舞……</view>
+    <view class="weui-article__p">　　一回头，我发现，我们现在做的这件事情，正在改变一些人的生活、学习，让他们变得更加积极、充实、健康向上，这不就是我想做的事情吗？因此，我在文经课表中加入早起打卡的功能，让更多的小伙伴们加入进来，让更多的人得到成长，变成自己想成为的样子，变成自己喜欢的自己。</view>
+    <view class="weui-article__p">　　如果你想提高自己，如果你想坚持做一件事情，欢迎加入文经早起打卡团，在这里我们只有一个小目标：早起。在同其他人相比的富余时间中做更有意义的事情，哪怕每天练两个字、每天精读十页书，请相信：在这里你不再一个人单打独斗，在这里，你一定会看见你的成长。</view>
+    <view class="weui-article__p">　　祝你早日变成自己喜欢的样子！</view>
+    <view class="weui-article__p" style="color:#43B0D1;">* 加入打卡团时请点击“允许”按钮</view>
+  </view>
+  <view class="button-sp-area">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="weui-btn" type="primary" plain="true">我愿加入打卡团</button>
+    <button bindtap="disagree" class="weui-btn" type="default" plain="true">放弃早起打卡</button>
+  </view>
+</view>

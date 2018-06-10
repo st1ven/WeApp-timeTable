@@ -1,67 +1,65 @@
-<view class="circle">
-  <view class="page__hd">
-    <image class="weui-media-box__thumb" src="/images/core/table.png" />
-    <view class="page__title">课表查询</view>
-    <view class="page__desc">课表数据来自学校官方教务网站</view>
-    <view class="weui-panel border-shadow">
-      <view class="weui-panel__bd">
-        <view class="weui-navbar">
-          <block wx:for="{{tabs}}" wx:key="*this">
-            <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
-              <view class="weui-navbar__title">{{item}}</view>
-            </view>
-          </block>
-        </view>
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/table.png" />
+  <view class="page__title">课表查询</view>
+  <view class="page__desc">课表数据来自学校官方教务网站</view>
+  <view class="weui-panel border-shadow">
+    <view class="weui-panel__bd">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
       </view>
     </view>
   </view>
-  <view class="page__bd">
-    <view class="weui-tab">
-      <view class="weui-tab__panel">
-        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-          <view class="weui-cells">
-            <view class="weui-cell weui-cell_input">
-              <view class="weui-cell__hd">
-                <view class="weui-label">班级</view>
-              </view>
-              <view class="weui-cell__bd">
-                <input class="weui-input" placeholder="例如：建1604-1" value="{{className}}" bindinput="classNameInput" />
-              </view>
+</view>
+<view class="page__bd">
+  <view class="weui-tab">
+    <view class="weui-tab__panel">
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view class="weui-cells">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">班级</view>
             </view>
-          </view>
-          <view class="weui-cells__tips">* 不知道所在班级？
-            <navigator url="/pages/search/id/index" class="click-search">点此查询</navigator>
-          </view>
-          <view class="button-sp-area">
-            <button bindtap="searchToday" class="weui-btn" type="primary" plain="true">查询当日课表</button>
-            <button bindtap="searchAll" class="weui-btn" type="default" plain="true">查询全部课表</button>
+            <view class="weui-cell__bd">
+              <input class="weui-input" placeholder="例如：建1604-1" value="{{className}}" bindinput="classNameInput" />
+            </view>
           </view>
         </view>
-        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-          <view class="weui-cells">
-            <view class="weui-cell weui-cell_select">
-              <view class="weui-cell__hd weui-cell__hd_in-select-after">
-                <view class="weui-label">系别</view>
-              </view>
-              <view class="weui-cell__bd">
-                <picker name="teacherDept" value="{{deptIndex}}" bindchange="teacherDeptPicker" range="{{dept}}">
-                  <view class="weui-select weui-select_in-select-after">{{dept[deptIndex]}}</view>
-                </picker>
-              </view>
+        <view class="weui-cells__tips">* 不知道所在班级？
+          <navigator url="/pages/search/id/index" class="click-search">点此查询</navigator>
+        </view>
+        <view class="button-sp-area">
+          <button bindtap="searchToday" class="weui-btn" type="primary" plain="true">查询当日课表</button>
+          <button bindtap="searchAll" class="weui-btn" type="default" plain="true">查询全部课表</button>
+        </view>
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class="weui-cells">
+          <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__hd weui-cell__hd_in-select-after">
+              <view class="weui-label">系别</view>
             </view>
-            <view class="weui-cell weui-cell_input">
-              <view class="weui-cell__hd">
-                <view class="weui-label">姓名</view>
-              </view>
-              <view class="weui-cell__bd">
-                <input class="weui-input" placeholder="例如：张三" value="{{teacherName}}" bindinput="teacherNameInput" />
-              </view>
+            <view class="weui-cell__bd">
+              <picker name="teacherDept" value="{{deptIndex}}" bindchange="teacherDeptPicker" range="{{dept}}">
+                <view class="weui-select weui-select_in-select-after">{{dept[deptIndex]}}</view>
+              </picker>
             </view>
           </view>
-          <view class="button-sp-area">
-            <button bindtap="searchToday" class="weui-btn" type="primary" plain="true">查询当日课表</button>
-            <button bindtap="searchAll" class="weui-btn" type="default" plain="true">查询全部课表</button>
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">姓名</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" placeholder="例如：张三" value="{{teacherName}}" bindinput="teacherNameInput" />
+            </view>
           </view>
+        </view>
+        <view class="button-sp-area">
+          <button bindtap="searchToday" class="weui-btn" type="primary" plain="true">查询当日课表</button>
+          <button bindtap="searchAll" class="weui-btn" type="default" plain="true">查询全部课表</button>
         </view>
       </view>
     </view>

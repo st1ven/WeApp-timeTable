@@ -1,0 +1,56 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/check.png" />
+  <view class="page__title">文经早起打卡团</view>
+  <view class="page__desc">时光会见证，你的努力与成长</view>
+  <button size="mini" bindtap="goCheckList" class="weui-btn" plain="true">排行榜</button>　
+  <button size="mini" open-type="share" class="weui-btn" plain="true">邀请好友</button>
+</view>
+<view class="page__bd">
+  <view class="weui-panel__bd">
+    <view class="weui-cells__title">打卡公告</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text style="font-size: 30rpx;">{{info.desc}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">打卡要求</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text style="font-size: 30rpx;">{{info.claim}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">个人信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__hd" style="position: relative; margin-right: 10px;">
+          <image src="{{info.avatarurl}}" style="width: 50px; height: 50px; display: block; border-radius: 50%;" />
+        </view>
+        <view class="weui-cell__bd flex-none">
+          <view class="weui-media-box__title">{{info.nickname}}</view>
+          <view style="font-size: 22rpx;color: #888888;">{{info.sentence}}</view>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="zan-capsule zan-capsule" style="float:right;">
+            <view class="zan-capsule__left">{{info.count}}</view>
+            <view class="zan-capsule__right">累计天数</view>
+          </view>
+        </view>
+      </view>
+      <form bindsubmit="formSubmit" report-submit="true">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" bindblur="bindCheckContent" value="{{checkContent}}" maxlength="50" placeholder="一句话，记录每天不一样的自己..." auto-height="true" />
+            <view class="weui-textarea-counter">* 字数限制50字</view>
+          </view>
+        </view>
+        <view class="button-sp-area">
+          <button formType="submit" bindtap="checkIn" class="weui-btn" disabled="{{checkStatus}}" type="default" plain="true">{{checkValue}}</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

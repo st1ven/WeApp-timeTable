@@ -5,6 +5,8 @@
 .page__hd {
   padding: 0rpx 35rpx;
   text-align: center;
+  background-image: linear-gradient(to top, #96deda 0%, #43b0d1 100%);
+  box-shadow: 0 10rpx 35rpx #dee1e8;
 }
 
 .page__bd {
@@ -62,7 +64,7 @@ button[type="default"][plain] {
 }
 
 .border-shadow {
-  border: 1px #dee1e8 solid;
+  top: 40rpx;
   border-radius: 15rpx;
   box-shadow: 0 10rpx 35rpx #dee1e8;
 }

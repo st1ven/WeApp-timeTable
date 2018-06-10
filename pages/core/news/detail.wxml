@@ -1,0 +1,22 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="/images/core/news.png" />
+  <view class="page__desc" style="font-size:30rpx;">{{detailData.title}}</view>
+  <view class="page__desc" style="color:#f8f8f8;">{{detailData.time}}</view>
+</view>
+<view class="weui-panel" wx:if="{{detailData}}">
+  <view class="weui-panel__bd">
+    <view class="weui-article">
+      <block wx:for="{{detailData.img}}" wx:for-index="idx" wx:key="*this" wx:for-item="img">
+        <image style="width:100%" mode="widthFix" src="{{img}}"></image>
+      </block>
+      <import src="../../../utils/wxParse/wxParse.wxml"/> 
+      <view class="wxParse">
+          <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="button-sp-area">
+  <button open-type="share" class="weui-btn" type="default" plain="true">分享此新闻</button>
+  <button bindtap="backIndex" class="weui-btn" type="primary" plain="true">返回到首页</button>
+</view>
