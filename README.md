@@ -1,5 +1,7 @@
 # WeApp-timeTable [![License](https://img.shields.io/badge/license-apache2-blue.svg)](LICENSE)
 
+⚠️ 此项目不再积极维护
+
 文经课表 - 基于微信小程序写的课表小程序
  - 基于微信小程序MINA框架的WXML、WXSS、JS为代码语言进行开发，视图层采用Flex弹性布局，逻辑层采用模块化模式开发。
  - 发布一周累计用户人数1000+，烟台大学文经学院、烟台大学文经学院学生会等官方微信公众号主动关联小程序。
